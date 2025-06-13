@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Cake and candle -->
+    <div class="cake">
+      <div class="candle">
+        <div class="flame" id="flame"></div>
+      </div>
+    </div>
+    <p class="instruction">🎤fastly  Blow the candle !</p>
+    <div class="message hidden" id="msg">🎉 Happy Birthday Nandhu ! 🎉</div>
+
+    <!-- Next button -->
+    <button id="nextBtn" class="btn hidden">Next ➡️</button>
+
+    <!-- Fever header and rotating images -->
+    <div id="feverSection" class="hidden">
+      <h2 class="header">🤒 Hope you didn’t get 103 Fever !</h2>
+      <div class="circle-gallery">
+        <img src="pic1.jpg" alt="img1">
+        <img src="pic2.jpg" alt="img2">
+        <img src="pic3.jpg" alt="img3">
+        <img src="pic4.jpg" alt="img4">
+      </div>
+      <button id="lastBtn" class="btn">Last but not least 🎁</button>
+    </div>
+
+    <!-- Final message -->
+    <div id="finalBar" class="final hidden">🎊 Many Many Happy Returns of the Day! 🎊</div>
+  </div>
+
+  <!-- Sounds -->
+  <audio id="birthdayMusic" src="birthday.mp3" autoplay loop></audio>
+  <audio id="blowSound" src="blow.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
