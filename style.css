@@ -1,0 +1,147 @@
+body {
+  background: linear-gradient(to bottom, #13c5ed, #ffe6f0);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+}
+
+.cake {
+  width: 150px;
+  height: 100px;
+  background: #ff99cc;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  animation: popIn 1s ease-out;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.candle {
+  width: 10px;
+  height: 40px;
+  background: #fff;
+  margin: 0 auto;
+  position: absolute;
+  top: -40px;
+  left: 0; right: 0;
+}
+
+.flame {
+  width: 12px;
+  height: 12px;
+  background: rgb(243, 58, 25);
+  border-radius: 50%;
+  position: absolute;
+  top: -14px;
+  left: -1px;
+  animation: flicker 0.2s infinite;
+}
+
+@keyframes flicker {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.instruction {
+  margin-top: 20px;
+  font-size: 18px;
+  animation: fadeIn 2s;
+}
+
+.message {
+  margin-top: 30px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #cc0066;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 1s ease-in-out;
+}
+
+.message.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hidden {
+  display: none;
+}
+
+.btn {
+  margin-top: 25px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #ff3399;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e60073;
+}
+
+.header {
+  font-size: 24px;
+  margin-top: 30px;
+  color: #99004d;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.circle-gallery {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  animation:  10s linear infinite;
+}
+
+.circle-gallery img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid #ff66b2;
+  object-fit: cover;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.final {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #ffb3d1;
+  border-radius: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #660033;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
